@@ -1,0 +1,32 @@
+@use 'src/styles/vars' as v;
+
+.header{
+  color: v.$color-primary;
+  font-family: v.$font-sans;
+
+  &-content{ // & = .header 
+    background: v.$color-primary;
+    width: 100%;
+    bottom: 2rem;
+    left: 0;
+    text-align: center;
+
+    &__title{ // & = .header-content 
+      color: v.$color-alternative;
+      font-family: v.$font-sans;
+      font-size: 2.5rem;
+      font-weight: 700;
+      padding-top: 2rem;
+    }
+
+    &__infos{ // & = .header-content 
+      color: v.$color-alternative;
+      font-family: v.$font-sans;
+      font-size: 1.5rem;
+      font-weight: 400;
+      padding-bottom: 2rem;
+    }
+
+  }
+
+}
