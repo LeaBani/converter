@@ -17,7 +17,7 @@
   color: v.$color-primary;
   font-family: v.$font-sans;
 
-  &-content{ // & = .header 
+  &-content{
     background: v.$color-bg;
     width: 100%;
     bottom: 1rem;
@@ -28,7 +28,7 @@
     align-items: center;    
 
 
-    &__infos{ // & = .header-content 
+    &__infos{
       color: v.$color-alternative;
       font-family: v.$font-sans;
       font-size: 1.5rem;

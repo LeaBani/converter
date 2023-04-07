@@ -18,7 +18,7 @@ class App extends React.Component {
         rate: 1.665247,
       },
       value: 10,
-      isLike: false,
+      isLiked: false,
     };
 
     /*     this.defaultCurrency = {
@@ -38,11 +38,12 @@ class App extends React.Component {
   };
 
   toggleLike = () => {
-    const { isLike } = this.state;
+    const { isLiked } = this.state;
 
     this.setState({
-      isLike: !isLike,
+      isLiked: !isLiked,
     });
+    // console.log("isLiked", isLiked);
   };
 
   changeCurrency = (newCurrency) => {
@@ -60,7 +61,7 @@ class App extends React.Component {
 
   render() {
     const {
-      isOpen, currency, value, isLike,
+      isOpen, currency, value, isLiked,
     } = this.state;
     return (
 
@@ -79,7 +80,7 @@ class App extends React.Component {
         />
 
         <Footer
-          isLike={isLike}
+          isLiked={isLiked}
           toggle={this.toggleLike}
         />
 
