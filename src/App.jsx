@@ -17,7 +17,7 @@ class App extends React.Component {
         name: 'Australian Dollar',
         rate: 1.665247,
       },
-      value: 10,
+      value: 1,
       isLiked: false,
     };
 
@@ -59,6 +59,14 @@ class App extends React.Component {
     });
   };
 
+  // TODO 
+  changeValue = (newValue) => {
+    this.setState({
+      value: newValue,
+    });
+    console.log(newValue);
+  };
+
   render() {
     const {
       isOpen, currency, value, isLiked,
@@ -71,6 +79,7 @@ class App extends React.Component {
           value={value}
           isOpen={isOpen}
           toggle={this.toggleCurrencies}
+          change={this.changeValue}
         />
         {isOpen && <CurrenciesList currenciesList={currenciesList} change={this.changeCurrency} />}
 
