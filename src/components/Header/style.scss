@@ -3,6 +3,7 @@
 .header{
   color: v.$color-primary;
   font-family: v.$font-sans;
+  margin-top: 2rem;
 
   &-content{ // & = .header 
     background: v.$color-primary;

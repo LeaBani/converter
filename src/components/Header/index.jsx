@@ -7,7 +7,6 @@ function Header({
   value, isOpen, toggle,
 }) {
 
-  // TODO add marging top
   // TODO add form to change value
   return (
     <header className="header">
