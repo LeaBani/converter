@@ -59,7 +59,6 @@ class App extends React.Component {
     });
   };
 
-  // TODO 
   changeValue = (newValue) => {
     this.setState({
       value: newValue,

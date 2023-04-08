@@ -16,7 +16,6 @@ function Footer({
         >
           <Heart
             className={isLiked ? 'heart' : 'heart-empty'}
-            isLiked={isLiked}
             onClick={toggle}
           />
         </p>
