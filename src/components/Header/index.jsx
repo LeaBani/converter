@@ -7,23 +7,17 @@ function Header({
   value, isOpen, toggle, change
 }) {
 
-  // TODO add form to change value
-
   const handleChange = (e) => {
     console.log('handleChange', e.target.value);
-    change(value);
-    
+    if (e.target.value > 0) {
+      change(parseInt(e.target.value, 10));
+    } else {
+      change(0);
+    }
   }
 
   const handleSubmit = (e) => {
       e.preventDefault();
-
-          // Read the form data
-    const form = e.target;
-    const formData = new FormData(form);
-
-    console.log(formData, form);
-
     }
 
   return (
@@ -31,9 +25,9 @@ function Header({
 
       <div className="header-content">
         <h1 className="header-content__title">Converter</h1>
-        <form method="post" onSubmit={handleSubmit}>
+        <form className="header-content__form" method="post" onSubmit={handleSubmit}>
         <input className="header-content__infos" name="value" placeholder="valeur" value={value} onChange={handleChange}/>
-        <button className="header-content__infos" type='submit'>Change</button>
+        <div className="header-content__infos">€</div>
         </form>
       </div>
       <Toggler isOpen={isOpen} toggle={toggle} />

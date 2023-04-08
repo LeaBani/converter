@@ -20,13 +20,22 @@
       padding-top: 2rem;
     }
 
+    &__form{
+      margin-top: 1rem;
+      display: inline-flex;
+      align-items: center;
+    }
+
     &__infos{ // & = .header-content 
       color: v.$color-alternative;
+      background-color: v.$color-primary;
+      border: none;
+      width: 3rem;
       font-family: v.$font-sans;
       font-size: 1.5rem;
       font-weight: 400;
-      // padding-bottom: 2rem;
       margin-bottom: 4rem;
+      text-align: right;
     }
 
   }
