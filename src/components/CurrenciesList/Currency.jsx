@@ -7,6 +7,9 @@ function Currency({ name, rate, change }) {
       rate, // rate: rate,
     });
   };
+
+  // TODO Add smooth transition
+
   return (
     <li
       className="currencies-list__area"

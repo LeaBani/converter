@@ -15,6 +15,9 @@ function CurrenciesList({ currenciesList, change }) {
     />
   ));
 
+  // TODO Add currencies from API https://app.freecurrencyapi.com/
+  // TODO Add smooth Transitions 
+
   return (
 
     <div className="currencies">

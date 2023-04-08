@@ -4,7 +4,7 @@ import { Heart } from 'react-feather';
 import './style.scss';
 
 function Footer({
-  isLike,
+  isLiked,
   toggle,
 }) {
   return (
@@ -15,8 +15,7 @@ function Footer({
           className="footer-content__infos"
         >
           <Heart
-            className={isLike ? 'heart' : 'heart-empty'}
-            isLike={isLike}
+            className={isLiked ? 'heart' : 'heart-empty'}
             onClick={toggle}
           />
         </p>
@@ -27,7 +26,7 @@ function Footer({
 }
 
 Footer.propTypes = {
-  isLike: PropTypes.bool.isRequired,
+  isLiked: PropTypes.bool.isRequired,
   toggle: PropTypes.func.isRequired,
 };
 

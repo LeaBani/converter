@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 function ConvertedValue({ currency: { name, rate }, value }) {
+
   return (
     <div className="result">
       <span className="result-value">{(rate * value).toFixed(2)}</span>

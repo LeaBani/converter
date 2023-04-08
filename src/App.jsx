@@ -17,8 +17,8 @@ class App extends React.Component {
         name: 'Australian Dollar',
         rate: 1.665247,
       },
-      value: 10,
-      isLike: false,
+      value: 1,
+      isLiked: false,
     };
 
     /*     this.defaultCurrency = {
@@ -38,11 +38,12 @@ class App extends React.Component {
   };
 
   toggleLike = () => {
-    const { isLike } = this.state;
+    const { isLiked } = this.state;
 
     this.setState({
-      isLike: !isLike,
+      isLiked: !isLiked,
     });
+    // console.log("isLiked", isLiked);
   };
 
   changeCurrency = (newCurrency) => {
@@ -58,9 +59,16 @@ class App extends React.Component {
     });
   };
 
+  changeValue = (newValue) => {
+    this.setState({
+      value: newValue,
+    });
+    console.log(newValue);
+  };
+
   render() {
     const {
-      isOpen, currency, value, isLike,
+      isOpen, currency, value, isLiked,
     } = this.state;
     return (
 
@@ -70,6 +78,7 @@ class App extends React.Component {
           value={value}
           isOpen={isOpen}
           toggle={this.toggleCurrencies}
+          change={this.changeValue}
         />
         {isOpen && <CurrenciesList currenciesList={currenciesList} change={this.changeCurrency} />}
 
@@ -79,7 +88,7 @@ class App extends React.Component {
         />
 
         <Footer
-          isLike={isLike}
+          isLiked={isLiked}
           toggle={this.toggleLike}
         />
 
